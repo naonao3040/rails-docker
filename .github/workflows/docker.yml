@@ -18,8 +18,9 @@ jobs:
         DB_PASSWORD: ${{ vars.DB_PASSWORD }}
         POSTGRES_USER: ${{ vars.POSTGRES_USER }}
         POSTGRES_PASSWORD: ${{ vars.POSTGRES_PASSWORD }}
-      run: |
-        echo "Environment variables are set"
+      run: echo "Environment variables are set"
+    - name: Debug environment variables
+      run: printenv
     - name: run test on docker-compose
       run: |
         docker compose build
