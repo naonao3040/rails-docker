@@ -23,6 +23,16 @@ Docker Compose version v2.15.1
   % cd rails-docker
   % ls
 ```
+- 次に環境変数用のファイルを作成する
+```
+% touch .env
+
+.envの内容に下記を追加
+
+DB_PASSWORD=postgres
+POSTGRES_USER=postgres
+POSTGRES_PASSWORD=postgres
+```
 
 - 次に`docker compose up`コマンドでコンテナを起動をします。
   - 上記コマンドでRailsでDBの作成、migrateの実行、サーバー立ち上げ、DBの起動まで一つのコマンドで環境を作成しています。 
